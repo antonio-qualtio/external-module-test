@@ -3,7 +3,7 @@ variable "storage_class" {
   description = "Storage class of bucket"
 
   validation {
-    condition     = length(var.storage_class) < 4
+    condition     = length(var.storage_class) > 4
     error_message = "The storage_class var value must longer than 4"
   }
 }
